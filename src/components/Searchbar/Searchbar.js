@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { searchPokemon } from '../../api'
 
 const Searchbar = () => {
-
-
     const [search, setSearch] = useState('');
+    const [pokemon, setPokemon] = useState();
 
     const onChange = (e) => {
         setSearch(e.target.value);
     }
     const onClick = async (e) => {
         const data = await searchPokemon(search);
-        console.log(data)
+        setPokemon(data);
     }
 
     return (
@@ -25,6 +24,13 @@ const Searchbar = () => {
                     <button onClick={onClick}>Search</button>
                 </span>
             </div>
+            {pokemon &&
+                <div>
+                    <div>Name: {pokemon.name}</div>
+                    <div>Weight: {pokemon.weight}</div>
+                    <img src={pokemon.sprites.front_default} />
+                </div>
+            }
         </div>
     )
 }
