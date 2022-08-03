@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./style.css"
 import { searchPokemon } from '../../api'
 
 const Searchbar = () => {
@@ -14,13 +15,13 @@ const Searchbar = () => {
     }
 
     return (
-        <div>
-            <div>
+        <div className="searchbar-container">
+            <div className="searchbar">
                 <input
                     placeholder="Search Pokemon..."
                     onChange={onChange}
                 />
-                <span>
+                <span className="searchbar-btn">
                     <button onClick={onClick}>Search</button>
                 </span>
             </div>
