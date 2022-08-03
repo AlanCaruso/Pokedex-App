@@ -5,8 +5,8 @@ import "./style.css"
 const Pokedex = (props) => {
     const { pokemons } = props;
     return (
-        <div>
-            <h1>Pokedex</h1>
+        <div className="pokedex-container">
+            <h1 className="pokedex-title">Pokedex</h1>
             <div className="pokedex-grid">
 
                 {pokemons.map((pokemon, index) => {
@@ -14,7 +14,7 @@ const Pokedex = (props) => {
 
                 })}
             </div>
-        </div>
+        </div >
     )
 }
 

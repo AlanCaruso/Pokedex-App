@@ -15,14 +15,14 @@ const Pokemon = (props) => {
             </div>
             <div className="card-body">
                 <div className="card-top">
-                    <h3>{pokemon.name}</h3>
+                    <h3 className="pokemon-name">{pokemon.name}</h3>
                     <div>#{pokemon.id}</div>
                 </div>
                 <div className="card-bottom">
                     <div className="pokemon-type">
                         {pokemon.types.map((type, index) => {
                             return (
-                                <div key={index}>{type.type.name}</div>
+                                <div className="pokemon-type-text" key={index}>{type.type.name}</div>
                             )
                         })}
                     </div>
