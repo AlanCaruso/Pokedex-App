@@ -2,3 +2,18 @@
     display: flex;
     flex-direction: row;
 }
+
+.pagination-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pagination-button img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.left-button {
+    transform: rotate(180deg);
+}

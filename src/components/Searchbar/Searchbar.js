@@ -26,7 +26,7 @@ const Searchbar = () => {
                 </span>
             </div>
             {pokemon &&
-                <div>
+                <div className="pokemon-search">
                     <div>Name: {pokemon.name}</div>
                     <div>Weight: {pokemon.weight}</div>
                     <img src={pokemon.sprites.front_default} />

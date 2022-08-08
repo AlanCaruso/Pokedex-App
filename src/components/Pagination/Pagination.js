@@ -1,16 +1,19 @@
 import React from "react";
 import "./style.css";
+import ArrowIcon from "../../img/arrow.svg";
 
 const Pagination = (props) => {
     const { onLeftClick, onRightClick, page, totalPages } = props;
     return (
         <div className="pagination">
-            <button onClick={onLeftClick}>
-                <div>Back</div>
+            <button className="pagination-button left-button">
+                <img src={ArrowIcon} onClick={onLeftClick}></img>
             </button>
-            <div>{page} from {totalPages}</div>
-            <button>
-                <div onClick={onRightClick}>Next</div>
+            <div>
+                <p>{page} from {totalPages}</p>
+            </div>
+            <button className="pagination-button">
+                <img src={ArrowIcon} onClick={onRightClick}></img>
             </button>
         </div>
     )

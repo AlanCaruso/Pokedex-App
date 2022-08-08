@@ -1,5 +1,6 @@
 .searchbar-container {
     display: grid;
+    justify-content: center;
     margin: 0px auto;
     padding: 20px 0 0px 0;
     align-items: center;
@@ -32,4 +33,17 @@
     color: white;
     height: 40px;
     padding: 10px 12px;
+}
+
+.pokemon-search {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-sizing: border-box;
+    grid-auto-columns: auto;
+    align-self: center;
+    justify-self: center;
+    margin-top: 20px;
 }

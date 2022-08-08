@@ -29,7 +29,7 @@ const Pokedex = (props) => {
                 />
             </div>
             {loading ?
-                <div>Loading...</div>
+                <div className="loading-text">Loading...</div>
                 :
                 <div className="pokedex-grid">
 
